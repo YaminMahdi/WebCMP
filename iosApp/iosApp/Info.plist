@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CADisableMinimumFrameDurationOnPhone</key>
+    <true/>
+
+    <!-- Network Security -->
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+
+    <!-- Alternative: More restrictive but secure approach -->
+    <!-- Remove NSAllowsArbitraryLoads and use this instead: -->
+    <!--
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>facebook.com</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSExceptionMinimumTLSVersion</key>
+                <string>TLSv1.0</string>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
+    -->
+
+    <!-- Privacy Permissions -->
+    <key>NSCameraUsageDescription</key>
+    <string>Camera access is required for this feature</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Microphone access is required for this feature</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Location access is required for this feature</string>
+
+    <!-- Additional WebView-related permissions -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Photo library access is required to upload images</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Photo library access is required to save images</string>
+
+    <!-- File access for WebView file uploads -->
+    <key>NSDocumentsFolderUsageDescription</key>
+    <string>Document access is required for file uploads</string>
+
+    <!-- Optional: If you need local notifications -->
+    <key>NSUserNotificationsUsageDescription</key>
+    <string>Notifications are used to inform you about important updates</string>
+
+    <!-- Optional: If WebView needs to access contacts -->
+    <key>NSContactsUsageDescription</key>
+    <string>Contact access is required for this feature</string>
+
+    <!-- Background modes (if needed for WebView background processing) -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>background-processing</string>
+        <string>background-fetch</string>
+    </array>
+
+    <!-- Support all device orientations -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+
+    <!-- iPad specific orientations -->
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+</dict>
+</plist>
